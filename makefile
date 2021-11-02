@@ -11,7 +11,7 @@ LIB_DYNAMIC_LOOP= basicClassification.o advancedClassificationLoop.o
 
 
 # make everything
-all: libclassrec.so libclassrec.a libclassloops.so libclassloops.a mains maindloop maindrec
+all: libclassrec.so libclassrec.a libclassloops.so libclassloops.a mains maindloop maindrec mainsloop
 
 
 # make main.o
