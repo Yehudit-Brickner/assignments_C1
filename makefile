@@ -29,6 +29,9 @@ maindloop: main.o libclassloops.so
 maindrec: main.o libclassrec.so
 	$(CC) $(FLAGS) -o maindrec main.o ./libclassrec.so
 
+# addded may nit be needed
+mainsloop: main.o libclassloops.a
+	$(CC) $(FLAGS) -o mainsloop main.o libclassloops.a
 
 # make libs
 
