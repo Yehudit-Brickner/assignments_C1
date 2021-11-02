@@ -39,7 +39,7 @@ int factorial(int  n){
 
 int isStrong(int n){
 
-    int x;
+    int x=0;
     int ans=0;
     int m=n;
     if (n==0){

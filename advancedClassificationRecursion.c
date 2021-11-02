@@ -13,7 +13,7 @@ int power(int base, int n){
 
 
 int isArmstrongRecursive(int n, int ans,int m, int countnow, int count){
-    int x;
+    int x=0;
     if (countnow==count){
         if (ans==n){
             return 1;
@@ -35,7 +35,6 @@ int isArmstrongRecursive(int n, int ans,int m, int countnow, int count){
 
 int isArmstrong(int n){
     int count=0;
-    int x;
     int m=n;
     int ans=0;
     while (m>=1){

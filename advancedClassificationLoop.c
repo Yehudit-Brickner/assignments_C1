@@ -43,8 +43,6 @@ int isArmstrong(int n){
 int isPalindrome(int n){
     int count=0;
     int flag=1;
-    int x;
-    int ans=0;
     int m=n;
 
     while (m>=1){
