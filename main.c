@@ -7,15 +7,26 @@
 
 int main(){
 
-    int start;
-    int end;
-    int x;
-   // printf("plese pick a full number");
+    int start=-1;
+    int end=-1;
+    int x=0;
+    int temp=0;
+  //  printf("plese pick a full number");
+   while(start<0){
     scanf("%d", &start);
-  //  printf("plese pick a full number bigger than the first");
+   }
+   // printf("plese pick a full number bigger than the first");
+    while(end<0){
     scanf("%d", &end);
+    }
     
-    
+    if (end<start){
+    temp=end;
+    end=start;
+    start=temp;
+    }
+
+
     printf("The Armstrong numbers are: ");
     for (int i=start; i<=end;i++){
         x=isArmstrong(i);
