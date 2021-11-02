@@ -14,24 +14,9 @@ LIB_DYNAMIC_LOOP= basicClassification.o advancedClassificationLoop.o
 all: libclassrec.so libclassrec.a libclassloops.so libclassloops.a mains maindloop maindrec
 
 
-
-# make libs
-
-libclassloops.a:$(LIB_STATIC_LOOP)
-	$(AR) -rcs libclassloops.a $(LIB_STATIC_LOOP)
-
-libclassrec.a:$(LIB_STATIC_REC)
-	$(AR) -rcs libclassrec.a $(LIB_STATIC_REC)
-
-#libclassloops.so:$(LIB_DYNAMIC_LOOP)
-#	$(CC) -shared -o libclassloops.so $(LIB_DYNAMIC_LOOP)
-
-libclassloops.so: $(LIB_DYNAMIC_LOOP)
-	$(CC) -shared -o libclassloops.so $(LIB_DYNAMIC_LOOP)
-
-libclassrec.so:$(LIB_DYNAMIC_REC)
-	$(CC) -shared -o libclassrec.so $(LIB_DYNAMIC_REC)
-
+# make main.o
+main.o: main.c NumClass.h
+	$(CC) $(FLAGS) -c main.c
 
 
 # make main with differnt libs
@@ -45,11 +30,20 @@ maindrec: main.o libclassrec.so
 	$(CC) $(FLAGS) -o maindrec main.o ./libclassrec.so
 
 
-# make main.o
-main.o: main.c NumClass.h
-	$(CC) $(FLAGS) -c main.c
+# make libs
+
+libclassloops.a:$(LIB_STATIC_LOOP)
+	$(AR) -rcs libclassloops.a $(LIB_STATIC_LOOP)
+
+libclassrec.a:$(LIB_STATIC_REC)
+	$(AR) -rcs libclassrec.a $(LIB_STATIC_REC)
 
 
+libclassloops.so: $(LIB_DYNAMIC_LOOP)
+	$(CC) -shared -o libclassloops.so $(LIB_DYNAMIC_LOOP)
+
+libclassrec.so:$(LIB_DYNAMIC_REC)
+	$(CC) -shared -o libclassrec.so $(LIB_DYNAMIC_REC)
 
 
 
