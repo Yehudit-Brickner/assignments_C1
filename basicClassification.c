@@ -3,8 +3,11 @@
 int isPrime(int n){
 
     int flag=1;
-        if (n<=1){
+        if (n<1){
             flag =0;
+        }
+        else if( n==1){
+            flag=1;
         }
         else{
             for (int i=2; i<=n/2 && flag!=0; i++ ){
