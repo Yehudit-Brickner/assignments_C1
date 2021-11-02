@@ -10,9 +10,9 @@ int main(){
     int start;
     int end;
     int x;
-    printf("plese pick a full number");
+   // printf("plese pick a full number");
     scanf("%d", &start);
-    printf("plese pick a full number bigger than the first");
+  //  printf("plese pick a full number bigger than the first");
     scanf("%d", &end);
     
     
