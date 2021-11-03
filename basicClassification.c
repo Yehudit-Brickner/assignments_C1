@@ -17,11 +17,9 @@ int isPrime(int n){
             }
         }
         if (flag==1){
-            //printf("%d is a prime number\n",n);
             return 1;
         }
         else{
-          ///  printf("%d is a not a prime number\n",n);
             return 0;
         }
     }
@@ -54,57 +52,12 @@ int isStrong(int n){
         m=m/10;
     }
     if (n==ans){
-        // printf("%d is a strong number\n", n);
         return 1;
     }
     else{
-        // printf("%d is not a string number\n", n);
         return 0;
     }
 }
 
 
 
-/*
-int main (){
-
-printf("%d\n",isPrime(0)); //false
-printf("%d\n",isPrime(4)); //false
-printf("%d\n",isPrime(1)); //false
-printf("%d\n",isPrime(10)); //false
-printf("%d\n",isPrime(-5)); //false
-printf("%d\n",isPrime(29)); //true
-printf("%d\n",isPrime(97)); //true
-printf("%d\n",isPrime(89)); //true
-  
-//int x=factorial(5);
-//printf( "5! = %d\n",x);
-
-printf("%d\n",isStrong(145)); //true
-printf("%d\n",isStrong(33)); //false
-
-int start;
-int end;
-int x;
-printf("plese pick a full number");
-scanf("%d", &start);
-printf("plese pick a full number bigger than the first");
-scanf("%d", &end);
-for (int i=start; i<=end;i++){
-    x=isPrime(i);
-    if (x==1){
-        printf("%d,",i);
-    }
-}
-printf("\n");
-for (int i=start; i<=end;i++){
-    x=isStrong(i);
-    if (x==1){
-        printf("%d,",i);
-    }
-}
-printf("\n");
-
-return(0);
-}
-*/

@@ -52,7 +52,6 @@ int IsPolindromeRecursive(int start,int end,int arr[]){
         return 1;
     }
     else{
-     //   printf( "s=%d and e=%d\n",arr[start],arr[end]);
         if (arr[start]==arr[end]){
             start=start+1;
             end=end-1;
@@ -79,43 +78,9 @@ int isPalindrome(int n){
     for (int i=0; i<count; i++){
         arr[i]=m%10;
         m=m/10;
-       // printf("%d,",arr[i]);
     }
-//printf("\n");
 return IsPolindromeRecursive(0,count-1,arr);
 
 }
 
 
-/*
-int main(){
-
-printf("%d\n",isArmstrong(407)); //true
-printf("%d\n",isArmstrong(8208)); //true
-printf("%d\n",isArmstrong(9474)); //true
-printf("%d\n",isArmstrong(370)); //true
-printf("%d\n",isArmstrong(567)); //false
-printf("%d\n",isArmstrong(159)); //false
-printf("%d\n",isPalindrome(121)); //true
-printf("%d\n",isPalindrome (456654)); //true
-printf("%d\n",isPalindrome (456754)); //false
-printf("%d\n",isPalindrome (123456)); //false
-
-int start;
-int end;
-int x;
-printf("plese pick a full number");
-scanf("%d", &start);
-printf("plese pick a full number bigger than the first");
-scanf("%d", &end);
-for (int i=start; i<=end;i++){
-    x=isArmstrong(i);
-    if (x==1){
-        printf("%d,",i);
-    }
-}
-printf("\n");
-return(0);
-
-}
-*/
