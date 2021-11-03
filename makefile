@@ -32,19 +32,19 @@ maindrec: main.o libclassrec.so
 
 
 # make libs
-loops:libclassloops.a
+loops: libclassloops.a
 libclassloops.a:$(LIB_STATIC_LOOP)
 	$(AR) -rcs libclassloops.a $(LIB_STATIC_LOOP)
 
-recursives:libclassrec.a
+recursives: libclassrec.a
 libclassrec.a:$(LIB_STATIC_REC)
 	$(AR) -rcs libclassrec.a $(LIB_STATIC_REC)
 
-loopd:libclassloops.so
+loopd: libclassloops.so
 libclassloops.so: $(LIB_DYNAMIC_LOOP)
 	$(CC) -shared -o libclassloops.so $(LIB_DYNAMIC_LOOP)
 
-recursived:libclassrec.so
+recursived: libclassrec.so
 libclassrec.so:$(LIB_DYNAMIC_REC)
 	$(CC) -shared -o libclassrec.so $(LIB_DYNAMIC_REC)
 
