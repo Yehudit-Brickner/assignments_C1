@@ -27,38 +27,38 @@ int main(){
     }
 
 
-    printf("The Armstrong numbers are: ");
+    printf("The Armstrong numbers are:");
     for (int i=start; i<=end;i++){
         x=isArmstrong(i);
         if (x==1){
-            printf("%d ",i);
+            printf(" %d",i);
         }
     }
     printf("\n");
     
-    printf("The Palindromes are: ");
+    printf("The Palindromes are:");
     for (int i=start; i<=end;i++){
         x=isPalindrome(i);
         if (x==1){
-            printf("%d ",i);
+            printf(" %d",i);
          }
     }
     printf("\n");
 
-    printf("The Prime numbers are: ");
+    printf("The Prime numbers are:");
     for (int i=start; i<=end;i++){
         x=isPrime(i);
         if (x==1){
-            printf("%d ",i);
+            printf(" %d",i);
          }
     }
     printf("\n");
 
-    printf("The Strong numbers are: ");
+    printf("The Strong numbers are:");
     for (int i=start; i<=end;i++){
         x=isStrong(i);
         if (x==1){
-            printf("%d ",i);
+            printf(" %d",i);
          }
     }
     printf("\n");
