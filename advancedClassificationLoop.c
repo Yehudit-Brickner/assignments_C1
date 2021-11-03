@@ -71,27 +71,3 @@ int isPalindrome(int n){
         return 0; 
     }
 }
-
-
-
-
-/*
-int main(){
-printf("%d\n",isArmstrong(407)); //true
-printf("%d\n",isArmstrong(8208)); //true
-printf("%d\n",isArmstrong(9474)); //true
-printf("%d\n",isArmstrong(370)); //true
-printf("%d\n",isArmstrong(567)); //false
-printf("%d\n",isArmstrong(159)); //false
-
-
-
-printf("%d\n",isPalindrome(121)); //true
-printf("%d\n",isPalindrome (456654)); //true
-printf("%d\n",isPalindrome (456754)); //false
-printf("%d\n",isPalindrome (123456)); //false
-
-return (0);
-}
-*/
-
